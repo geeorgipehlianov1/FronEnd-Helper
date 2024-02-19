@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.example {
+    padding: 24px;
+    border: 2px dashed gray;
+}
+
+.example:not(:last-child) {
+    margin-bottom: 72px;
+}
+
+.example .first-element {
+    background-color: #8B687F;
+    padding: 6px;
+    color: #fff;
+
+}
+
+.example .second-element {
+    background-color: #AED9E0;
+    padding: 6px;
+}
+
+.example-sides {
+    margin-bottom: 72px;
+}
+
+.example-sides .moved {
+    position: relative;
+    background-color: aqua;
+    padding: 6px;
+
+    /* top: 6px; */
+    /* left: 12px; */
+    /* right: 12px; */
+    /* bottom: 6px; */
+}
+
+/* Static - This is the default position of every html element */
+.example.static .first-element {
+    /* Every element with position is not able to work with the four properties for positioning: top, left, right, bottom */
+    /* position: static;  Default position */ 
+    top: 50px; /* NOT WORKING */
+    left: 50px; /* NOT WORKING */
+    right: 50px; /* NOT WORKING */
+    bottom: 50px; /* NOT WORKING */
+}
+
+/* Relative */
+.example.relative .first-element {
+    /* If we want to work with the positioning of the element, we can to use relative BUT: */
+    /* Position relative is always used with position absolute because they have important relation between them */
+    /* The reason is: When you use only relative for positioning, the element will be moved wherever you want but the 
+    space that it initially occupied won't be removed and the other elements will be adjusted considering the element still on its original position */
+    /* Let's simplify with example: You write some text, you put one span inside it and moved it on the bottom of the screen with relative, fine the 
+    element will be moved to the bottom of the screen but in the text where the span was originally white space will remain because
+    it is consider by the browser that this element is still there: you can play with: example-sides .moved to see this  */
+    /* NOTE: it is really hard to position elements just using relative because it is relative only by itself */
+    position: relative;
+    top: 20px;
+    left: 450px;
+    width: 100px;
+}
+
+/* Absolute */
+/* Uncomment this later. You will be notified when! */
+/* .example.absolute {
+    position: relative;
+} */
+
+.example.absolute .first-element {
+    /* When we use absolute we tell the browser that we want to position this element but 
+    don't try to keep it's position like in relative it's like it is not here for you
+    the html element exists but it is not visible. The other elements ignores it when
+    they position themselves */
+    /* If you try this example here you will see that again our element is acting strange 
+    and we need to apply to it a lot of pixels to adjust it. */
+    /* position: absolute; */
+    /* top: 5px; */
+    /* right: 20px; */
+    border-radius: 20px;
+    padding: 4px 12px;
+    /* Yes as you can see the element is in the top paragraph, why? This is because when we use absolute 
+    to adjust the size it needs to be in a relative container because if it is not it is going to look
+    in the DOM three for the first element with position different than static and adjust by it. This
+    is where we can see the important relation between position: relative and position: absolute  */
+    /* NOW UNCOMMENT THE UPPER SECTION .example.absolute {
+    position: relative; }  */
+    /* WHEN WE USE ABSOLUTE, THE ELEMENT WILL BECOME INLINE-BLOCK ELEMENT  */ 
+    /* WHEN WE USE ABSOLUTE, THE ELEMENT WILL NOT BE AFFECTED BY OTHER ELEMENTS PADDING */
+    /* WE CAN ALSO USE NEGATIVE VALUES FOR TOP LEFT RIGHT AND BOTTOM */
+}
+
+/* Fixed */
+.example.fixed .first-element {
+    /* The idea about fixed positioning is that this element is 
+    fixed in the viewport and it will never change it's position */
+    /* Try this example so you can see it in action */
+    /* The example seems like message icon in websites right
+    this is its main usage :D */
+    /* Some people like to use it for the navigation bar but 
+    there are way better approaches for the navigation bar */
+
+    position: fixed;
+    /* bottom: 20px; */
+    /* right: 20px; */
+}
+
+
+/* Sticky */
+/* Uncomment this later. You will be notified when! */
+/* .example.sticky {
+    height: 300px;
+    overflow: auto;
+} */
+
+.example.sticky .first-element {
+    /* When we use sticky the element behave like a fixed element, but it 
+    will be moved only if we have scroll event reaching it */
+    /* Seems a bit odd but the main thing here is that 
+    unlike the fixed position, the element will not got outside the box in 
+    which it is placed */
+    /* Uncomment the upper class and the position here to see it in
+    action */
+    /* position: sticky; */
+    top:0px;
+}
