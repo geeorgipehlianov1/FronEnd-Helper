@@ -1,0 +1,81 @@
+/* Grid is really useful to make layouts */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li:nth-child(3n+1) {
+    background-color: lightcoral;
+}
+
+ul li:nth-child(3n+2) {
+    background-color: lightgreen;
+}
+
+ul li:nth-child(3n + 3) {
+    background-color: lightseagreen;
+}
+
+/* CSS Grid for columns */
+ul {
+    display: grid;
+    /* 3 columns 1st column 2fr, 2nd column 1fr, 3rd column 1fr; grid-template-columns: 2fr 1fr 1fr; */
+    /* Here we actually saying: I want to have 3 columns and each column has 1fr calculated by the browser with */
+    /* 3 columns shorten for /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(5, 100px); */
+    /* We can add gap between the columns like this */
+    /* column-gap: 12px;
+    row-gap: 12px; */
+    /* Or shorten like this */
+    gap: 20px 12px;
+    /* Also we can combine units */
+    /* grid-template-columns: 100px repeat(2, 1fr) 200px; */
+}
+
+/* CSS Grid for rows - NOT REALLY USED */
+/* ul {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+} */
+
+
+
+/* CSS Grid template example */
+body {
+    display: grid;
+    grid-auto-columns: 1fr;
+    /* grid-auto-rows: 1fr; */
+    grid-template: 
+    'head head head head'
+    'side main main main'
+    'foot foot foot foot';
+    margin: 0;
+    gap: 12px;
+}
+
+.header {
+    background-color: lightgray;
+    grid-area: head;
+}
+
+.aside {
+    background-color: lightblue;
+    grid-area: side;
+}
+
+.main {
+    background-color: yellow;
+    grid-area: main;
+}
+
+.footer {
+    background-color: lightskyblue;
+    grid-area: foot;
+}
+
+/* Note that we are using different names from the css classes for the grid-template, there
+is no rule that we need different namings from the class, you can duplicate them as much as you want,
+but my personal opinion is that it is a good practice to use different names so it will be easy to understand
+which is the class for styling and which is the name for separating areas. */
