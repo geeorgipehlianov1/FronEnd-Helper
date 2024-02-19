@@ -48,6 +48,6 @@ The repository is a work in progress, housing an extensive collection of work ex
   - [Fluid Typography Simplified](https://css-tricks.com/simplified-fluid-typography/)
   - [Generating font-size CSS Rules and Creating a Fluid Type Scale](https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/)
 
- # Landing pages with Next.js and Tailwind CSS.
+ # Landing pages with Next.js and Tailwind CSS
 
 
