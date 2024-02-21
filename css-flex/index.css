@@ -1,0 +1,108 @@
+/* Flex is not working directly on our elements instead the elements
+should be placed in a container with the property flex as one we have 
+here in this example: container */
+.container {
+    background-color: #b0a8b9;
+    border: 2px dashed black;
+    /* Uncomment this line to see the result */
+    display: flex;
+    /* Instead of being block elements they directly become inline elements 
+    they are ordered in on line and they take space as their content is */
+    /* Now go to .container .element:nth-child(1) and uncomment the lines with id: First Example  */
+
+    /* By only seeing this example you can consider that flex is working only
+    on the X axis but no we have ability also to work on the Y axis by using flex-direction  */
+
+    /* The default direction of the flex */
+     /* flex-direction: row;  */
+
+    /* Ability to work with the Y axis */
+    /* flex-direction: column; */
+
+    /* Ability to reverse the X axis */
+    /* Instead going left to right we are going right to left */
+    /* flex-direction: row-reverse; */
+
+    /* Ability to reverse the Y axis */
+    /* Instead going up to down we are going down to up */
+    /* flex-direction: column-reverse; */
+
+
+    /* For this example go to the html file and uncomment the lorem comments in the div */
+    /* As you can see the flex is calculating the content and it is trying to fill the space */
+
+    /* The default value of flex-wrap */
+    /* flex-wrap: nowrap; */
+
+    /* If we use flex wrap the flex is going to fill the rows because again the content of the element
+    allows this but if the content is too big it will not fit and break to a new line */
+    /* flex-wrap: wrap; */
+
+    /* If we use flex wrap reverse the it will change the direction */
+    /* flex-wrap: wrap-reverse; */
+    
+    /* If we want to position our element on X axis we can use justify-content */
+    /* There a lot of values here we can use play with them */
+    /* Nice thing to try is to use justify-content with flex-direction because they 
+    are related and it can be useful sometimes */
+    justify-content: space-evenly;
+
+
+    /* If we want to position our element on Y axis we can use align-items */
+    /* By default when we use flex the elements are going to be stretched no matter how 
+    high the content will get, so this is the default value of align-items */
+    /* The height in flex container is always calculated by the heigh of the 
+    container itself or if we don't specify the height of the container
+    the height of the container is calculated by the highest element in 
+    the container: now you can uncomment the line with id: Now, and comment the hight ant the align here */
+    /* height: 100px; */
+    align-items: center;
+
+
+    /* If we want to add space between the elements we can use gap */
+    /* gap: 20px */
+}
+
+
+/* Here we will cover the properties of each element inside the grid */
+.container .element {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container .element:nth-child(1) {
+    background-color: #845ec2;
+    
+    /* id: Now */
+    /* height: 200px; */
+
+    /* id: First Example: Uncomment this line to see the result */
+    /* height: 60px;
+    width: 120px;
+    margin-top: 12px; */
+    /* As you can see we have control over width and height so this means
+    that our elements are not just inline, they are inline block  */
+    /* We have control over the hole box model */
+}
+
+.container .element:nth-child(2) {
+    background-color: #d65db1;
+}
+
+.container .element:nth-child(3) {
+    background-color: #ff6f91;
+}
+
+.container .element:nth-child(4) {
+    background-color: #ff9671;
+}
+
+.container .element:nth-child(5) {
+    background-color: #ffc75f;
+}
+
+.container .element:nth-child(6) {
+    background-color: #f9f871;
+}
+
