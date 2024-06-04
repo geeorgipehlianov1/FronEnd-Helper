@@ -50,6 +50,7 @@ The repository is a work in progress, housing an extensive collection of work ex
 
  # Prebuild components that might help you
   - [Prebuild components in Next](https://github.com/geeorgipehlianov1/fe-next-helper-components)
+  - [Sidebar where on click is expanded](https://github.com/dieudonneAwa/blog-dashboard)
 
  # Landing pages with Next.js and Tailwind CSS
    - [Investa langind page](https://github.com/geeorgipehlianov1/investa-landing-page)
