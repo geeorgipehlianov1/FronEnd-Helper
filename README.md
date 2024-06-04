@@ -52,7 +52,7 @@ The repository is a work in progress, housing an extensive collection of work ex
   - [Prebuild components in Next](https://github.com/geeorgipehlianov1/fe-next-helper-components)
 
  # Landing pages with Next.js and Tailwind CSS
-   Coming soon... (I hope so :D)
+   - [Investa langind page](https://github.com/geeorgipehlianov1/investa-landing-page)
     
 
 
