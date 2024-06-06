@@ -54,6 +54,9 @@ The repository is a work in progress, housing an extensive collection of work ex
   - [Discrod and Telegram Bot](https://github.com/geeorgipehlianov1/discord-telegram-bot)
   - [Github authentication with NextAuth](https://github.com/geeorgipehlianov1/github-sign-in-next-auth)
 
+ # Projects that might help you
+  - [Server actions with Infitinit scroll and Framer Motion](https://github.com/geeorgipehlianov1/next-js-anime)
+
  # Landing pages with Next.js and Tailwind CSS
    - [Investa langind page](https://github.com/geeorgipehlianov1/investa-landing-page)
     
